@@ -45,18 +45,18 @@ function get_field_image($field, $size=false) {
 		return array('url'=>'Install and activate ACF Plugin first!', 'alt'=>'Install and activate ACF Plugin first!');
 	}
 	
-	/* fast order
-	1: array
-	2: id
-	3: url
+	/* fastest execution order
+	1: ACF return array
+	2: ACF return id
+	3: ACF return url
 	*/
 	
 	//if ACF return an array
 	if (is_array($immagine)) {
 		
-		if ($size) { //size è specificato
+		if ($size) { //size is set
 			$array_immagine['url'] = (!empty($immagine['sizes'][$size])) ? $immagine['sizes'][$size] : $immagine['url'];
-		} else { //size non è specificato
+		} else { //size size is not set
 			$array_immagine['url'] = $immagine['url'];
 		}
 		$array_immagine['alt'] = $immagine['alt'];
@@ -64,11 +64,11 @@ function get_field_image($field, $size=false) {
 	//if ACF return the ID
 	} elseif (is_numeric($immagine)) {
 		
-		if ($size) { //size è specificato
+		if ($size) { //size is set
 			$url_immagine_size = wp_get_attachment_image_src($immagine, $size);
 			$url_immagine_full = wp_get_attachment_image_src($immagine, 'full');
 			$array_immagine['url'] = (!empty($url_immagine_size[0])) ? $url_immagine_size[0] : $url_immagine_full[0];
-		} else { //size non è specificato
+		} else { //size is not set
 			$url_immagine_full = wp_get_attachment_image_src($immagine, 'full');
 			$array_immagine['url'] = $url_immagine_full[0];
 		}
