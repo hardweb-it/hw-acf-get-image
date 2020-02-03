@@ -28,9 +28,7 @@ Return: Array('url'=>$url, 'alt'=>$alt);
 ## Installation
  
 This section describes how to install the plugin and get it working.
- 
-e.g.
- 
+
 1. Upload `hw-acf-get-image` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Read the example to understand how it works.
