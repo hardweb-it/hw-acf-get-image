@@ -29,11 +29,10 @@ if (!defined('WPINC')) {
 }
 
 /**
- * Convert values of ACF core date time pickers from Y-m-d H:i:s to timestamp
- * @param  string $value   unmodified value
- * @param  int    $post_id post ID
- * @param  object $field   field object
- * @return string          modified value
+ * Get the image field, rebuild it as array, it return 2 keys ('url' and 'alt') with the values.
+ * @param  string $field		field_slug
+ * @param  string $size (optional)	image-size-slug
+ * @return array			url and alt keys with the values
  */
 
 # GET ACF IMAGES
