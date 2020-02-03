@@ -15,8 +15,8 @@ In any case (Array output, URL output, ID output), the new 'get_field_image' fun
 
 Usage `<?php $my_image = get_field_image($field, $size); ?>`
 
-$field (string, name of the ACF field)
-$size (string, name of the image size)
+- $field (type string, slug of the ACF field)
+- $size (type string, slug of the image size)
 
 Return: Array('url'=>$url, 'alt'=>$alt);
 
