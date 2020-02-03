@@ -43,7 +43,7 @@ function get_field_image($field, $size=false) {
 	if (function_exists('get_field')) {
 		$immagine = get_field($field);
 	} else {
-		return array('url'=>'Install and active ACF Plugin', 'alt'=>'Install and active ACF Plugin');
+		return array('url'=>'Install and activate ACF Plugin first!', 'alt'=>'Install and activate ACF Plugin first!');
 	}
 	
 	/* fast order
